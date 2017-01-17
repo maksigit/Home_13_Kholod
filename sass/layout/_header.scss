@@ -1,0 +1,109 @@
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+header {
+    background: url("../images/ebjigrh3tcehf7unlq5e-sailing-5--1-.png") no-repeat center/cover;
+}
+
+.container-header {
+    max-width: 1200px;
+    padding: 38px 0 300px 0;
+    border: 1px solid white;
+    margin: auto;
+}
+
+.wrap-logo {
+    max-width: 1500px;
+    border: 1px solid white;
+}
+
+.logo {
+    float: left;
+    margin-left: -166px;
+    img {
+        margin-top: 9px;
+    }
+}
+
+ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    border: 1px solid white;
+    list-style-type: none;
+    li {
+        float: left;
+        a {
+            display: inline-block;
+            padding: 15px 39px;
+            color: #f9fafe;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 22px;
+            text-transform: uppercase;
+        }
+    }
+    li + li + li {
+        a {
+            border: 1px solid white;
+            border-radius: 5px;
+            margin-right: -150px;
+        }
+    }
+}
+
+h1 {
+    margin: 219px 0 0 0;
+    text-align: center;
+    color: #f9fafe;
+    font-family: 'Raleway', sans-serif;
+    font-size: 72px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h3 {
+    text-align: center;
+    color: #f9fafe;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.wrap-form {
+    max-width: 770px;
+    margin: 90px auto 0;
+
+
+}
+textarea {
+    float: left;
+    padding: 25px 0 25px 30px;
+    resize: none;
+    width: 74%;
+    color: #717171;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+.button {
+    a {
+        text-decoration: none;
+        display: inline-block;
+        background: #e7434e url("../images/sailboat-kopia.png") no-repeat 22% 50%;
+        padding: 26px 41px 26px 68px;
+        color: #ffffff;
+        font-family: 'Raleway', sans-serif;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
