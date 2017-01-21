@@ -16,107 +16,150 @@ header {
     margin: auto;
     max-width: 1200px;
     padding: 38px 0 300px 0;
-    border: 1px solid white;
 
+    .wrap-logo {
+        max-width: 1500px;
+        .logo {
+            float: left;
+            margin-left: -166px;
+        }
+        .nav {
+            float: right;
+            margin: 0 -150px 0 0;
+        }
+        .menu {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+            li + li + li {
+                a {
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
+            }
+        }
 
+        .menu li {
+            float: left;
+        }
 
-.wrap-logo {
-    max-width: 1500px;
-    border: 1px solid white;
-
-
-.logo {
-    float: left;
-    margin-left: -166px;
-    img {
-        margin-top: 9px;
-    }
-}
-
-ul {
-    float: right;
-    margin: 0 -150px 0 0;
-    padding: 0;
-    border: 1px solid white;
-    list-style-type: none;
-    li {
-        float: left;
-        a {
-            display: inline-block;
+        .menu li a {
+            display: block;
+            text-decoration: none;
             padding: 15px 39px;
             color: #f9fafe;
-            font-family: 'Raleway', sans-serif;
+            font-family: $font-title-button;
             font-size: 16px;
             font-weight: 700;
             line-height: 22px;
             text-transform: uppercase;
         }
-    }
-    li + li + li {
-        a {
-            border: 1px solid white;
-            border-radius: 5px;
-            //margin-right: -150px;
-        }
-    }
-}
-    @media (min-width: 320px) and (max-width: 1530px) {
-        .logo  {
-            margin-left: 0;
-        }
-        ul{
-            margin: 0;
-        }
-    }
-}
 
-h1 {
-    margin: 219px 0 0 0;
-    text-align: center;
-    color: #f9fafe;
-    font-family: 'Raleway', sans-serif;
-    font-size: 72px;
-    font-weight: 700;
-    text-transform: uppercase;
-}
+        .menu li a:hover {
+            background-color: rgba(0, 0, 0, .7);
+        }
+        .menu-icon {
+            text-align: right;
+            display: none;
+        }
+        .menu-icon svg g {
+            fill: #e7434e
+        }
 
-h3 {
-    text-align: center;
-    color: #f9fafe;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 30px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-.wrap-form {
-    max-width: 770px;
-    margin: 90px auto 0;
-    border-radius: 5px;
-}
-textarea {
-    float: left;
-    padding: 25px 0 25px 30px;
-    resize: none;
-    width: 74%;
-    color: #717171;
-    font-family: 'Raleway', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: uppercase;
-    border-radius: 5px  0 0 5px;
-}
-.button {
-    a {
-        text-decoration: none;
-        display: inline-block;
-        background: #e7434e url("../images/sailboat-kopia.png") no-repeat 22% 50%;
-        padding: 26px 41px 26px 68px;
-        color: #ffffff;
-        font-family: 'Raleway', sans-serif;
-        font-size: 14px;
+        @media (max-width: 760px) {
+            .nav {
+                position: absolute;
+                top:40px;
+                margin: 0;
+                float: right;
+                width: 100%;
+            }
+            .menu-icon {
+                display: block;
+            }
+            .menu li {
+                float: none;
+                background-color: rgba(0, 0, 0, .5);
+            }
+            .menu-icon svg {
+                padding: 5px;
+                box-sizing: content-box;
+                &:hover{
+                background-color: rgba(0, 0, 0, .5);
+                }
+            }
+        }
+        @media (min-width: 320px) and (max-width: 1530px) {
+            .nav {
+                margin: 0;
+            }
+            .logo {
+                margin-left: 0;
+            }
+            ul {
+                margin: 0;
+            }
+        }
+    }
+
+    h1 {
+        margin: 219px 0 0 0;
+        text-align: center;
+        color: #f9fafe;
+        font-family: $font-title-button;
+        font-size: 72px;
         font-weight: 700;
         text-transform: uppercase;
-        border-radius: 0 5px 5px 0;
+    }
+
+    h3 {
+        text-align: center;
+        color: #f9fafe;
+        font-family: $font-other;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    .wrap-form {
+        max-width: 770px;
+        margin: 90px auto 0;
+        border-radius: 5px;
+    }
+    textarea {
+        float: left;
+        padding: 25px 0 25px 30px;
+        resize: none;
+        width: 74%;
+        color: #717171;
+        font-family: $font-title-button;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+    .button {
+        a {
+            text-decoration: none;
+            display: inline-block;
+            background: #e7434e url("../images/sailboat-kopia.png") no-repeat 22% 50%;
+            padding: 26px 41px 26px 68px;
+            color: #ffffff;
+            font-family: $font-title-button;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 5px;
+        }
     }
 }
+
+@media (min-width: 320px) and (max-width: 760px) {
+    .container-header {
+        .wrap-form {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
 }
